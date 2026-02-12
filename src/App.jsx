@@ -13,6 +13,7 @@ import {
 } from './data/index';
 
 import logo from './assets/logo.png';
+import authorImg from './assets/author.jpg';
 
 // --- ANIMATION VARIANTS ---
 const fadeInUp = {
@@ -160,8 +161,8 @@ const Hero = () => (
                                 <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold-500 via-navy-900 to-transparent"></div>
 
                                 <div className="relative z-20 h-full flex flex-col items-center justify-center p-8 text-center">
-                                    <div className="w-32 h-32 bg-gold-500/10 rounded-full flex items-center justify-center mb-6 border border-gold-500/20 backdrop-blur-sm">
-                                        <GraduationCap className="w-16 h-16 text-gold-400" />
+                                    <div className="w-40 h-40 rounded-full flex items-center justify-center mb-6 border-4 border-gold-500/30 overflow-hidden shadow-2xl">
+                                        <img src={authorImg} alt="Dr. Rajiv Chopra" className="w-full h-full object-cover" />
                                     </div>
                                     <h3 className="text-3xl font-serif text-white mb-2 tracking-wide">Dr. Rajiv Chopra</h3>
                                     <p className="text-gold-400/80 font-mono text-xs uppercase tracking-widest">Professor & Scientist</p>
