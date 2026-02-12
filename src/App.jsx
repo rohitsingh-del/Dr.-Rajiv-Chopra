@@ -12,6 +12,8 @@ import {
     AWARDS, RESEARCH, MEMBERSHIPS, CERTIFICATIONS, ENGAGEMENTS
 } from './data/index';
 
+import logo from './assets/logo.png';
+
 // --- ANIMATION VARIANTS ---
 const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -33,9 +35,7 @@ const Navbar = () => (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between h-20 items-center">
                 <div className="flex items-center gap-3">
-                    <div className="bg-slate-900 p-2 rounded-lg">
-                        <BookOpen className="h-6 w-6 text-amber-500" />
-                    </div>
+                    <img src={logo} alt="Dr. Rajiv Chopra Logo" className="h-12 w-auto object-contain drop-shadow-sm" />
                     <div>
                         <span className="font-serif font-bold text-xl text-slate-900 leading-none block">Dr. Rajiv Chopra</span>
                         <span className="text-[10px] uppercase tracking-widest text-slate-500 font-sans font-semibold">Author & Professor</span>
