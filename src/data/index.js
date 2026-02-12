@@ -19,8 +19,9 @@ export const INTERNATIONAL_BOOKS = [
         publisher: "Mercury Learning & Information (USA)",
         year: 2024,
         color: "from-teal-500 to-emerald-700",
-        link: "https://www.amazon.com/s?k=Cloud+Computing+Rajiv+Chopra+Mercury+Learning",
-        cover: null // Add image import here, e.g., cloudComputingImg
+        link: "https://www.amazon.in/Cloud-Computing-Introduction-R-Chopra/dp/1683920929",
+        cover: "/books/cloud-computing-front.jpg",
+        backCover: "/books/cloud-computing-back.jpg"
     },
     {
         id: 2,

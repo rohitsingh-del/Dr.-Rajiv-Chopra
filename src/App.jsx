@@ -256,42 +256,74 @@ const RevolvingCarousel = () => {
     );
 };
 
-const BookCard = ({ book }) => (
-    <motion.div
-        whileHover={{ y: -5 }}
-        className="bg-white rounded-none shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-gray-100 group relative overflow-hidden"
-    >
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold-400 to-gold-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+const BookCard = ({ book }) => {
+    const [showBack, setShowBack] = useState(false);
 
-        {/* Abstract Cover Art */}
-        <div className={`h-56 bg-gradient-to-br ${book.color} p-8 flex flex-col justify-end relative overflow-hidden`}>
-            <div className="absolute inset-0 bg-navy-900/10 mix-blend-multiply"></div>
-            <div className="absolute -right-10 -top-10 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
-            <h3 className="text-white font-serif font-bold text-2xl leading-tight relative z-10 drop-shadow-md pr-4">{book.title}</h3>
-        </div>
+    return (
+        <motion.div
+            whileHover={{ y: -5 }}
+            className="bg-white rounded-none shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-gray-100 group relative overflow-hidden"
+        >
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold-400 to-gold-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
 
-        <div className="p-8 flex flex-col flex-grow bg-white">
-            <div className="flex items-center justify-between mb-6">
-                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">{book.publisher}</p>
-                <span className="text-xs font-bold text-navy-900 bg-gray-100 px-3 py-1">{book.year}</span>
+            {/* Cover Art or Image */}
+            <div className={`h-64 relative overflow-hidden group-hover:shadow-inner transition-all duration-500`}>
+                {book.cover ? (
+                    <div className="w-full h-full relative bg-gray-100">
+                        <img
+                            src={showBack && book.backCover ? book.backCover : book.cover}
+                            alt={book.title}
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        {book.backCover && (
+                            <button
+                                onClick={(e) => { e.preventDefault(); setShowBack(!showBack); }}
+                                className="absolute bottom-2 right-2 bg-white/90 p-1.5 rounded-full shadow-md hover:bg-gold-500 hover:text-white transition-colors z-20"
+                                title="Flip Cover"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-repeat"><path d="m17 2 4 4-4 4" /><path d="M3 11v-1a4 4 0 0 1 4-4h14" /><path d="m7 22-4-4 4-4" /><path d="M21 13v1a4 4 0 0 1-4 4H3" /></svg>
+                            </button>
+                        )}
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 pointer-events-none"></div>
+                    </div>
+                ) : (
+                    <div className={`w-full h-full bg-gradient-to-br ${book.color} p-8 flex flex-col justify-end relative`}>
+                        <div className="absolute inset-0 bg-navy-900/10 mix-blend-multiply"></div>
+                        <div className="absolute -right-10 -top-10 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
+                        <h3 className="text-white font-serif font-bold text-2xl leading-tight relative z-10 drop-shadow-md pr-4">{book.title}</h3>
+                    </div>
+                )}
             </div>
 
-            <p className="text-gray-600 text-sm mb-8 flex-grow leading-relaxed font-light">
-                Essential reading for mastering the core concepts and advanced applications in this field.
-            </p>
+            <div className="p-6 flex flex-col flex-grow bg-white">
+                <div className="flex items-center justify-between mb-4">
+                    <p className="text-xs font-bold text-gray-400 uppercase tracking-widest truncate max-w-[60%]">{book.publisher}</p>
+                    <span className="text-xs font-bold text-navy-900 bg-gray-100 px-2 py-1">{book.year}</span>
+                </div>
 
-            {/* Buy Links */}
-            <div className="grid grid-cols-2 gap-4 mt-auto">
-                <button className="flex items-center justify-center w-full py-3 px-4 bg-navy-900 text-white text-xs font-bold uppercase tracking-wide hover:bg-gold-600 transition-colors">
-                    Amazon
-                </button>
-                <button className="flex items-center justify-center w-full py-3 px-4 bg-transparent border border-gray-200 text-navy-900 text-xs font-bold uppercase tracking-wide hover:bg-gray-50 transition-colors">
-                    Publisher
-                </button>
+                <h3 className="text-navy-900 font-serif font-bold text-lg leading-tight mb-2 line-clamp-2 group-hover:text-gold-600 transition-colors">
+                    {book.title}
+                </h3>
+
+                <p className="text-gray-600 text-xs mb-6 flex-grow leading-relaxed font-light line-clamp-3">
+                    A comprehensive guide designed for students and professionals.
+                </p>
+
+                {/* Buy Links */}
+                <div className="grid grid-cols-1 gap-3 mt-auto">
+                    <a
+                        href={book.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center w-full py-2.5 px-4 bg-navy-900 text-white text-xs font-bold uppercase tracking-wide hover:bg-gold-600 transition-colors"
+                    >
+                        Buy on Amazon
+                    </a>
+                </div>
             </div>
-        </div>
-    </motion.div>
-);
+        </motion.div>
+    );
+};
 
 const LibrarySection = () => {
     const [activeTab, setActiveTab] = useState('international');
