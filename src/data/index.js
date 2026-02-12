@@ -19,7 +19,8 @@ export const INTERNATIONAL_BOOKS = [
         publisher: "Mercury Learning & Information (USA)",
         year: 2024,
         color: "from-teal-500 to-emerald-700",
-        link: "https://www.amazon.com/s?k=Cloud+Computing+Rajiv+Chopra+Mercury+Learning"
+        link: "https://www.amazon.com/s?k=Cloud+Computing+Rajiv+Chopra+Mercury+Learning",
+        cover: null // Add image import here, e.g., cloudComputingImg
     },
     {
         id: 2,
@@ -27,7 +28,8 @@ export const INTERNATIONAL_BOOKS = [
         publisher: "Mercury Learning & De Gruyter",
         year: 2018,
         color: "from-blue-600 to-indigo-800",
-        link: "https://www.amazon.com/s?k=C+Programming+Rajiv+Chopra"
+        link: "https://www.amazon.com/s?k=C+Programming+Rajiv+Chopra",
+        cover: null
     },
     {
         id: 3,
@@ -35,7 +37,8 @@ export const INTERNATIONAL_BOOKS = [
         publisher: "Mercury Learning (USA)",
         year: 2018,
         color: "from-purple-600 to-violet-900",
-        link: "https://www.amazon.com/s?k=Software+Testing+Rajiv+Chopra"
+        link: "https://www.amazon.com/s?k=Software+Testing+Rajiv+Chopra",
+        cover: null
     },
     {
         id: 4,
@@ -43,7 +46,8 @@ export const INTERNATIONAL_BOOKS = [
         publisher: "Mercury Learning (USA)",
         year: 2016,
         color: "from-cyan-600 to-blue-800",
-        link: "https://www.amazon.com/s?k=Database+Management+Systems+Rajiv+Chopra"
+        link: "https://www.amazon.com/s?k=Database+Management+Systems+Rajiv+Chopra",
+        cover: null
     },
     {
         id: 5,
@@ -51,7 +55,8 @@ export const INTERNATIONAL_BOOKS = [
         publisher: "Mercury Learning (USA)",
         year: 2020,
         color: "from-rose-500 to-pink-800",
-        link: "https://www.amazon.com/s?k=Principles+of+Programming+Languages+Rajiv+Chopra"
+        link: "https://www.amazon.com/s?k=Principles+of+Programming+Languages+Rajiv+Chopra",
+        cover: null
     },
     {
         id: 6,
@@ -59,7 +64,8 @@ export const INTERNATIONAL_BOOKS = [
         publisher: "Mercury Learning (USA)",
         year: 2019,
         color: "from-slate-600 to-slate-800",
-        link: "https://www.amazon.com/s?k=Operating+Systems+Rajiv+Chopra"
+        link: "https://www.amazon.com/s?k=Operating+Systems+Rajiv+Chopra",
+        cover: null
     }
 ];
 

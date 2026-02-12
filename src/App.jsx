@@ -13,7 +13,8 @@ import {
 } from './data/index';
 
 import logo from './assets/logo.png';
-import authorImg from './assets/author.jpg';
+// Using public folder for author image to avoid import issues
+const authorImg = '/author.jpg';
 
 // --- ANIMATION VARIANTS ---
 const fadeInUp = {
