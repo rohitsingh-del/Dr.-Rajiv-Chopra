@@ -130,7 +130,7 @@ const Hero = () => (
                     <motion.p variants={fadeInUp} className="text-lg text-navy-800/70 mb-10 max-w-lg leading-relaxed font-light">
                         Dr. Rajiv Chopra is a distinguished Professor and Scientist with over 25 years of experience in Computer Science & Engineering. He has authored
                         <span className="font-semibold text-navy-900"> 43 textbooks </span>
-                        used globally, specializing in Data Science, Cloud Computing, and Quantum Mechanics. His work bridges the gap between complex theoretical concepts and practical industry applications, empowering the next generation of tech leaders.
+                        used globally, specializing in Data Science, Cloud Computing, and Quantum Computing. His work bridges the gap between complex theoretical concepts and practical industry applications, empowering the next generation of tech leaders.
                     </motion.p>
 
                     <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
