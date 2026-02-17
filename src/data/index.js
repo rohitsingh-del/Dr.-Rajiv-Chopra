@@ -67,6 +67,15 @@ export const INTERNATIONAL_BOOKS = [
         color: "from-slate-600 to-slate-800",
         link: "https://www.amazon.com/s?k=Operating+Systems+Rajiv+Chopra",
         cover: "/books/operating-systems.jpg"
+    },
+    {
+        id: 7,
+        title: "IoT Advanced Applications",
+        publisher: "De Gruyter",
+        year: 2024,
+        color: "from-orange-600 to-red-800",
+        link: "https://www.amazon.in/Iot-Advanced-Applications-Rajiv-Chopra/dp/1041206917",
+        cover: null
     }
 ];
 
