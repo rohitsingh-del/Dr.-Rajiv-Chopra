@@ -20,7 +20,7 @@ export const INTERNATIONAL_BOOKS = [
         year: 2024,
         color: "from-teal-500 to-emerald-700",
         link: "https://www.amazon.in/Cloud-Computing-Introduction-R-Chopra/dp/1683920929",
-        cover: "/books/cloud-computing-front.jpg",
+        cover: "/books/cloud-computing-cover.jpg",
         backCover: "/books/cloud-computing-back.jpg"
     },
     {
@@ -39,7 +39,7 @@ export const INTERNATIONAL_BOOKS = [
         year: 2018,
         color: "from-purple-600 to-violet-900",
         link: "https://www.amazon.com/s?k=Software+Testing+Rajiv+Chopra",
-        cover: null
+        cover: "/books/software-testing.jpg"
     },
     {
         id: 4,

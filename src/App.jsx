@@ -128,9 +128,9 @@ const Hero = () => (
                     </motion.h1>
 
                     <motion.p variants={fadeInUp} className="text-lg text-navy-800/70 mb-10 max-w-lg leading-relaxed font-light">
-                        Empowering the next generation of tech leaders with
+                        Dr. Rajiv Chopra is a distinguished Professor and Scientist with over 25 years of experience in Computer Science & Engineering. He has authored
                         <span className="font-semibold text-navy-900"> 43 textbooks </span>
-                        spanning Data Science, Cloud Computing, and Quantum Mechanics.
+                        used globally, specializing in Data Science, Cloud Computing, and Quantum Mechanics. His work bridges the gap between complex theoretical concepts and practical industry applications, empowering the next generation of tech leaders.
                     </motion.p>
 
                     <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
@@ -224,29 +224,35 @@ const RevolvingCarousel = () => {
             <div className="scene">
                 <div className="carousel">
                     {INTERNATIONAL_BOOKS.map((book) => (
-                        <div key={book.id} className={`carousel__cell rounded-sm shadow-2xl p-8 flex flex-col justify-between bg-white border-none group`}>
-                            {/* Book Spine Effect */}
-                            <div className={`absolute top-0 bottom-0 left-0 w-2 bg-gradient-to-r ${book.color}`}></div>
+                        <div key={book.id} className={`carousel__cell rounded-sm shadow-2xl ${book.cover ? '' : 'p-8 flex flex-col justify-between bg-white'} border-none group`}>
+                            {book.cover ? (
+                                <img src={book.cover} alt={book.title} className="w-full h-full object-cover rounded-sm" />
+                            ) : (
+                                <>
+                                    {/* Book Spine Effect */}
+                                    <div className={`absolute top-0 bottom-0 left-0 w-2 bg-gradient-to-r ${book.color}`}></div>
 
-                            <div>
-                                <div className={`w-12 h-1 mb-6 ${book.color.replace('from-', 'bg-').split(' ')[0]}`}></div>
-                                <h3 className="font-serif font-bold text-2xl leading-tight mb-3 text-navy-900 group-hover:text-gold-600 transition-colors">{book.title}</h3>
-                                <p className="text-xs text-gray-400 font-bold w-max px-2 py-1 bg-gray-50 uppercase tracking-wider">{book.publisher}</p>
-                            </div>
-                            <div>
-                                <div className="w-full h-px bg-gray-100 my-4"></div>
-                                <div className="flex justify-between items-center">
-                                    <p className="text-2xl font-bold text-gray-200 font-serif">{book.year}</p>
-                                    <a
-                                        href={book.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-navy-900 hover:text-gold-600 font-bold text-sm flex items-center gap-1 transition-colors"
-                                    >
-                                        Order <ExternalLink className="w-3 h-3" />
-                                    </a>
-                                </div>
-                            </div>
+                                    <div>
+                                        <div className={`w-12 h-1 mb-6 ${book.color.replace('from-', 'bg-').split(' ')[0]}`}></div>
+                                        <h3 className="font-serif font-bold text-2xl leading-tight mb-3 text-navy-900 group-hover:text-gold-600 transition-colors">{book.title}</h3>
+                                        <p className="text-xs text-gray-400 font-bold w-max px-2 py-1 bg-gray-50 uppercase tracking-wider">{book.publisher}</p>
+                                    </div>
+                                    <div>
+                                        <div className="w-full h-px bg-gray-100 my-4"></div>
+                                        <div className="flex justify-between items-center">
+                                            <p className="text-2xl font-bold text-gray-200 font-serif">{book.year}</p>
+                                            <a
+                                                href={book.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-navy-900 hover:text-gold-600 font-bold text-sm flex items-center gap-1 transition-colors"
+                                            >
+                                                Order <ExternalLink className="w-3 h-3" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </>
+                            )}
                         </div>
                     ))}
                 </div>
