@@ -21,7 +21,7 @@ export const INTERNATIONAL_BOOKS = [
         color: "from-teal-500 to-emerald-700",
         link: "https://www.amazon.in/Cloud-Computing-Introduction-R-Chopra/dp/1683920929",
         cover: "/books/cloud-computing-cover.jpg",
-        backCover: "/books/cloud-computing-back.jpg"
+        cover: "/books/cloud-computing-cover.jpg"
     },
     {
         id: 2,
@@ -30,7 +30,7 @@ export const INTERNATIONAL_BOOKS = [
         year: 2018,
         color: "from-blue-600 to-indigo-800",
         link: "https://www.amazon.com/s?k=C+Programming+Rajiv+Chopra",
-        cover: null
+        cover: "/books/c-programming-self-teaching.jpg"
     },
     {
         id: 3,
@@ -48,7 +48,7 @@ export const INTERNATIONAL_BOOKS = [
         year: 2016,
         color: "from-cyan-600 to-blue-800",
         link: "https://www.amazon.com/s?k=Database+Management+Systems+Rajiv+Chopra",
-        cover: null
+        cover: "/books/dbms-practical.jpg"
     },
     {
         id: 5,
@@ -66,7 +66,7 @@ export const INTERNATIONAL_BOOKS = [
         year: 2019,
         color: "from-slate-600 to-slate-800",
         link: "https://www.amazon.com/s?k=Operating+Systems+Rajiv+Chopra",
-        cover: null
+        cover: "/books/operating-systems.jpg"
     }
 ];
 
