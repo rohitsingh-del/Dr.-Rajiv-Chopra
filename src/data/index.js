@@ -75,7 +75,7 @@ export const INTERNATIONAL_BOOKS = [
         year: 2024,
         color: "from-orange-600 to-red-800",
         link: "https://www.amazon.in/Iot-Advanced-Applications-Rajiv-Chopra/dp/1041206917",
-        cover: null
+        cover: "/books/iot-advanced-applications.jpg"
     }
 ];
 
