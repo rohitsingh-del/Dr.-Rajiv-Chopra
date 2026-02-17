@@ -31,29 +31,7 @@
 }
 
 /* 6 items = 60 degrees apart. TranslateZ = 220 / 2 / tan(PI/6) ≈ 190px. Using 280px for spacing */
-.carousel__cell:nth-child(1) {
-    transform: rotateY(0deg) translateZ(280px);
-}
-
-.carousel__cell:nth-child(2) {
-    transform: rotateY(60deg) translateZ(280px);
-}
-
-.carousel__cell:nth-child(3) {
-    transform: rotateY(120deg) translateZ(280px);
-}
-
-.carousel__cell:nth-child(4) {
-    transform: rotateY(180deg) translateZ(280px);
-}
-
-.carousel__cell:nth-child(5) {
-    transform: rotateY(240deg) translateZ(280px);
-}
-
-.carousel__cell:nth-child(6) {
-    transform: rotateY(300deg) translateZ(280px);
-}
+/* Hardcoded positions removed - now handled dynamically in React */
 
 @keyframes rotateCarousel {
     from {

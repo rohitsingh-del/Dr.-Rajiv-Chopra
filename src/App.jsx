@@ -210,6 +210,12 @@ const Hero = () => (
 );
 
 const RevolvingCarousel = () => {
+    const totalBooks = INTERNATIONAL_BOOKS.length;
+    const theta = 360 / totalBooks;
+    const cellWidth = 220;
+    const gap = 40; // Spacing between items
+    const radius = Math.round(((cellWidth + gap) / 2) / Math.tan(Math.PI / totalBooks));
+
     return (
         <div className="bg-navy-900 text-white py-24 overflow-hidden relative border-t border-gold-500/20" id="international-showcase">
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
@@ -223,8 +229,14 @@ const RevolvingCarousel = () => {
 
             <div className="scene">
                 <div className="carousel">
-                    {INTERNATIONAL_BOOKS.map((book) => (
-                        <div key={book.id} className={`carousel__cell rounded-sm shadow-2xl ${book.cover ? '' : 'p-8 flex flex-col justify-between bg-white'} border-none group`}>
+                    {INTERNATIONAL_BOOKS.map((book, index) => (
+                        <div
+                            key={book.id}
+                            className={`carousel__cell rounded-sm shadow-2xl ${book.cover ? '' : 'p-8 flex flex-col justify-between bg-white'} border-none group`}
+                            style={{
+                                transform: `rotateY(${index * theta}deg) translateZ(${radius}px)`
+                            }}
+                        >
                             {book.cover ? (
                                 <img src={book.cover} alt={book.title} className="w-full h-full object-cover rounded-sm" />
                             ) : (
