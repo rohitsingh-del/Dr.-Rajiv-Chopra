@@ -30,7 +30,7 @@ export const INTERNATIONAL_BOOKS = [
         year: 2018,
         color: "from-blue-600 to-indigo-800",
         link: "https://www.amazon.com/s?k=C+Programming+Rajiv+Chopra",
-        cover: "/books/c-programming-self-teaching.jpg"
+        cover: "/books/intro-to-programming-c.jpg"
     },
     {
         id: 3,
