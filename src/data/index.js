@@ -57,7 +57,7 @@ export const INTERNATIONAL_BOOKS = [
         year: 2020,
         color: "from-rose-500 to-pink-800",
         link: "https://www.amazon.com/s?k=Principles+of+Programming+Languages+Rajiv+Chopra",
-        cover: null
+        cover: "/books/principles-of-programming-languages.jpg"
     },
     {
         id: 6,
