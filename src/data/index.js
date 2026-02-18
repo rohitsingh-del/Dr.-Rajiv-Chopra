@@ -82,11 +82,12 @@ export const INTERNATIONAL_BOOKS = [
 export const NATIONAL_BOOKS = [
     {
         id: 7,
-        title: "Artificial Intelligence",
+        title: "Artificial Intelligence (AI & ML)",
         publisher: "S. Chand & Company",
         year: 2023,
         color: "from-indigo-600 to-purple-800",
-        link: "https://www.amazon.in/s?k=Artificial+Intelligence+Rajiv+Chopra+S+Chand"
+        link: "https://www.amazon.in/s?k=Artificial+Intelligence+Rajiv+Chopra+S+Chand",
+        cover: "/books/artificial-intelligence-ai-ml.jpg"
     },
     {
         id: 8,
@@ -94,7 +95,8 @@ export const NATIONAL_BOOKS = [
         publisher: "S. Chand & Company",
         year: 2022,
         color: "from-orange-500 to-red-700",
-        link: "https://www.amazon.in/s?k=Computer+Graphics+Rajiv+Chopra"
+        link: "https://www.amazon.in/s?k=Computer+Graphics+Rajiv+Chopra",
+        cover: "/books/computer-graphics-multimedia.jpg"
     },
     {
         id: 9,
@@ -102,7 +104,8 @@ export const NATIONAL_BOOKS = [
         publisher: "S. Chand & Company",
         year: 2016,
         color: "from-cyan-700 to-blue-900",
-        link: "https://www.amazon.in/s?k=Web+Engineering+Rajiv+Chopra"
+        link: "https://www.amazon.in/s?k=Web+Engineering+Rajiv+Chopra",
+        cover: "/books/web-engineering.jpg"
     },
     {
         id: 10,
@@ -110,7 +113,8 @@ export const NATIONAL_BOOKS = [
         publisher: "Khanna Book House",
         year: 2025,
         color: "from-violet-600 to-fuchsia-800",
-        link: "https://www.amazon.in/s?k=Deep+Learning+Rajiv+Chopra+Khanna"
+        link: "https://www.amazon.in/s?k=Deep+Learning+Rajiv+Chopra+Khanna",
+        cover: "/books/deep-learning-practical.jpg"
     },
     {
         id: 11,
@@ -126,7 +130,8 @@ export const NATIONAL_BOOKS = [
         publisher: "Khanna Book House",
         year: 2025,
         color: "from-fuchsia-600 to-pink-800",
-        link: "https://www.amazon.in/s?k=Quantum+Computing+Rajiv+Chopra"
+        link: "https://www.amazon.in/s?k=Quantum+Computing+Rajiv+Chopra",
+        cover: "/books/quantum-computing-techniques.jpg"
     },
     {
         id: 13,
@@ -134,7 +139,8 @@ export const NATIONAL_BOOKS = [
         publisher: "Khanna Book House",
         year: 2024,
         color: "from-blue-600 to-indigo-900",
-        link: "https://www.amazon.in/s?k=Data+Science+Rajiv+Chopra"
+        link: "https://www.amazon.in/s?k=Data+Science+Rajiv+Chopra",
+        cover: "/books/data-science-ai-ml-dl.jpg"
     },
     {
         id: 14,
@@ -142,7 +148,8 @@ export const NATIONAL_BOOKS = [
         publisher: "S. Chand & Company",
         year: 2020,
         color: "from-slate-700 to-slate-900",
-        link: "https://www.amazon.in/s?k=Computer+Architecture+Rajiv+Chopra"
+        link: "https://www.amazon.in/s?k=Computer+Architecture+Rajiv+Chopra",
+        cover: "/books/computer-architecture-organization.jpg"
     },
     {
         id: 15,
@@ -150,7 +157,8 @@ export const NATIONAL_BOOKS = [
         publisher: "S. Chand & Company",
         year: 2019,
         color: "from-emerald-600 to-teal-800",
-        link: "https://www.amazon.in/s?k=Software+Project+Management+Rajiv+Chopra"
+        link: "https://www.amazon.in/s?k=Software+Project+Management+Rajiv+Chopra",
+        cover: "/books/software-project-management.jpg"
     },
 ];
 
