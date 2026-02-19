@@ -179,7 +179,8 @@ export const AWARDS = [
     { title: "Nesin Best Researcher Award (2020)", image: "/awards/award6.png" },
     { title: "IARDO Academic Excellence Award for Best College Teacher (2019)", image: "/awards/award7_sndt.jpg" },
     { title: "International Conference Award Recognition", image: "/awards/award8.jpg" },
-    { title: "Distinguished Academic Contribution Award", image: "/awards/award9.JPG" }
+    { title: "Distinguished Academic Contribution Award", image: "/awards/award9.JPG" },
+    { title: "International Excellence Award (2025)", image: "/awards/award10.jpg" }
 ];
 
 export const RESEARCH = [
