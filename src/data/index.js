@@ -176,7 +176,7 @@ export const AWARDS = [
     { title: "International Prolific Author Certification (2024)", image: "/awards/award3.png" },
     { title: "RABINDRA RATNA PURASKAR - LITERATURE (2024)", image: "/awards/award4.png" },
     { title: "AMERICAN MERIT COUNCIL Recognition (2024)", image: "/awards/award5.png" },
-    { title: "NESIN Best Researcher Award (2020)", image: null },
+    { title: "Nesin Best Researcher Award (2020)", image: "/awards/award6.png" },
     { title: "IARDO Academic Excellence Award for Best College Teacher (2019)", image: null }
 ];
 
