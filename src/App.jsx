@@ -238,7 +238,7 @@ const RevolvingCarousel = () => {
                             }}
                         >
                             {book.cover ? (
-                                <img src={book.cover} alt={book.title} className="w-full h-full object-cover rounded-sm" />
+                                <img src={book.cover} alt={book.title} className="w-full h-full object-contain rounded-sm" />
                             ) : (
                                 <>
                                     {/* Book Spine Effect */}
@@ -286,11 +286,11 @@ const BookCard = ({ book }) => {
             {/* Cover Art or Image */}
             <div className={`h-64 relative overflow-hidden group-hover:shadow-inner transition-all duration-500`}>
                 {book.cover ? (
-                    <div className="w-full h-full relative bg-gray-100">
+                    <div className="w-full h-full relative bg-gray-50">
                         <img
                             src={showBack && book.backCover ? book.backCover : book.cover}
                             alt={book.title}
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                         />
                         {book.backCover && (
                             <button
@@ -555,12 +555,23 @@ const AwardsSection = () => {
                             duration: 40,
                         }}
                         style={{ width: "max-content" }}
+                        onHoverStart={() => { }} // Placeholder to potential pause logic
                     >
                         {[...awardImages, ...awardImages, ...awardImages, ...awardImages].map((award, idx) => (
-                            <div key={idx} className="w-[400px] h-[300px] flex-shrink-0 relative rounded-xl overflow-hidden border border-gold-500/20 group shadow-2xl">
-                                <img src={award.image} alt={award.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                            <motion.div
+                                key={idx}
+                                className="w-[400px] h-[300px] flex-shrink-0 relative rounded-xl overflow-hidden border border-gold-500/20 group shadow-2xl cursor-pointer bg-navy-900"
+                                whileHover={{
+                                    scale: 1.1,
+                                    y: -10,
+                                    zIndex: 20,
+                                    boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)"
+                                }}
+                                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                            >
+                                <img src={award.image} alt={award.title} className="w-full h-full object-cover" />
                                 <div className="absolute inset-0 bg-navy-900/10 group-hover:bg-navy-900/0 transition-colors duration-500"></div>
-                            </div>
+                            </motion.div>
                         ))}
                     </motion.div>
                 </div>
