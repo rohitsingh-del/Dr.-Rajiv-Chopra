@@ -171,13 +171,13 @@ export const TIMELINE = [
 ];
 
 export const AWARDS = [
-    "USA Life Time Achievement Award Recognition (2024)",
-    "London Prolific Author of CSE Recognition (2024)",
-    "International Prolific Author Certification (2024)",
-    "RABINDRA RATNA PURASKAR - LITERATURE (2024)",
-    "AMERICAN MERIT COUNCIL Recognition (2024)",
-    "NESIN Best Researcher Award (2020)",
-    "IARDO Academic Excellence Award for Best College Teacher (2019)"
+    { title: "USA Life Time Achievement Award Recognition (2024)", image: "/src/assets/awards/award1.jpg" },
+    { title: "London Prolific Author of CSE Recognition (2024)", image: "/src/assets/awards/award2.jpg" },
+    { title: "International Prolific Author Certification (2024)", image: "/src/assets/awards/award3.png" },
+    { title: "RABINDRA RATNA PURASKAR - LITERATURE (2024)", image: "/src/assets/awards/award4.png" },
+    { title: "AMERICAN MERIT COUNCIL Recognition (2024)", image: "/src/assets/awards/award5.png" },
+    { title: "NESIN Best Researcher Award (2020)", image: null },
+    { title: "IARDO Academic Excellence Award for Best College Teacher (2019)", image: null }
 ];
 
 export const RESEARCH = [

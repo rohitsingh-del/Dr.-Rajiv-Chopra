@@ -486,11 +486,21 @@ const ResumeSection = () => (
                             <Award className="w-40 h-40" />
                         </div>
                         <h3 className="text-lg font-bold text-gold-500 mb-6 relative z-10 uppercase tracking-widest border-b border-gold-500/30 pb-4">Honors & Awards</h3>
-                        <ul className="space-y-6 relative z-10">
-                            {AWARDS.slice(0, 5).map((award, idx) => (
+                        <div className="grid grid-cols-2 gap-4 relative z-10 mb-6">
+                            {AWARDS.filter(a => a.image).map((award, idx) => (
+                                <div key={idx} className="group relative aspect-[4/3] overflow-hidden rounded-md border border-gold-500/30">
+                                    <img src={award.image} alt={award.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                    <div className="absolute inset-0 bg-navy-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2 text-center">
+                                        <p className="text-[10px] text-gold-400 font-bold uppercase tracking-widest">{award.title}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <ul className="space-y-4 relative z-10">
+                            {AWARDS.map((award, idx) => (
                                 <li key={idx} className="text-sm text-gray-300 relative pl-4">
                                     <span className="absolute left-0 top-1.5 w-1.5 h-1.5 bg-gold-500 rounded-full"></span>
-                                    {award}
+                                    {award.title}
                                 </li>
                             ))}
                         </ul>
