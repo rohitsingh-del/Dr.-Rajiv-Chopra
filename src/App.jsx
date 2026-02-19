@@ -559,11 +559,7 @@ const AwardsSection = () => {
                         {[...awardImages, ...awardImages, ...awardImages, ...awardImages].map((award, idx) => (
                             <div key={idx} className="w-[400px] h-[300px] flex-shrink-0 relative rounded-xl overflow-hidden border border-gold-500/20 group shadow-2xl">
                                 <img src={award.image} alt={award.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                                <div className="absolute inset-0 bg-navy-900/40 group-hover:bg-navy-900/20 transition-colors duration-500"></div>
-                                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-950 via-navy-950/80 to-transparent p-6 pt-24 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                                    <div className="w-8 h-1 bg-gold-500 mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                    <p className="text-white font-serif font-bold text-xl leading-tight group-hover:text-gold-400 transition-colors drop-shadow-lg shadow-black">{award.title}</p>
-                                </div>
+                                <div className="absolute inset-0 bg-navy-900/10 group-hover:bg-navy-900/0 transition-colors duration-500"></div>
                             </div>
                         ))}
                     </motion.div>
