@@ -177,7 +177,9 @@ export const AWARDS = [
     { title: "RABINDRA RATNA PURASKAR - LITERATURE (2024)", image: "/awards/award4.png" },
     { title: "AMERICAN MERIT COUNCIL Recognition (2024)", image: "/awards/award5.png" },
     { title: "Nesin Best Researcher Award (2020)", image: "/awards/award6.png" },
-    { title: "IARDO Academic Excellence Award for Best College Teacher (2019)", image: "/awards/award7_sndt.jpg" }
+    { title: "IARDO Academic Excellence Award for Best College Teacher (2019)", image: "/awards/award7_sndt.jpg" },
+    { title: "International Conference Award Recognition", image: "/awards/award8.jpg" },
+    { title: "Distinguished Academic Contribution Award", image: "/awards/award9.JPG" }
 ];
 
 export const RESEARCH = [
