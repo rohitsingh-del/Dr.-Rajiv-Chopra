@@ -486,16 +486,7 @@ const ResumeSection = () => (
                             <Award className="w-40 h-40" />
                         </div>
                         <h3 className="text-lg font-bold text-gold-500 mb-6 relative z-10 uppercase tracking-widest border-b border-gold-500/30 pb-4">Honors & Awards</h3>
-                        <div className="grid grid-cols-2 gap-4 relative z-10 mb-6">
-                            {AWARDS.filter(a => a.image).map((award, idx) => (
-                                <div key={idx} className="group relative aspect-[4/3] overflow-hidden rounded-md border border-gold-500/30">
-                                    <img src={award.image} alt={award.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                                    <div className="absolute inset-0 bg-navy-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2 text-center">
-                                        <p className="text-[10px] text-gold-400 font-bold uppercase tracking-widest">{award.title}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+
                         <ul className="space-y-4 relative z-10">
                             {AWARDS.map((award, idx) => (
                                 <li key={idx} className="text-sm text-gray-300 relative pl-4">
@@ -539,6 +530,49 @@ const ResumeSection = () => (
 );
 
 
+const AwardsSection = () => {
+    const awardImages = AWARDS.filter(a => a.image);
+
+    return (
+        <section id="awards" className="py-24 bg-navy-900 border-t border-white/5 overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 mb-16 text-center">
+                <span className="text-gold-500 font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Recognition</span>
+                <h2 className="text-4xl font-serif font-bold text-white mb-6">Honors & Awards</h2>
+                <div className="w-20 h-1 bg-gold-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div className="relative w-full">
+                <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-navy-900 to-transparent z-10"></div>
+                <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-navy-900 to-transparent z-10"></div>
+
+                <div className="flex overflow-hidden">
+                    <motion.div
+                        className="flex gap-8"
+                        animate={{ x: ["0%", "-50%"] }}
+                        transition={{
+                            repeat: Infinity,
+                            ease: "linear",
+                            duration: 40,
+                        }}
+                        style={{ width: "max-content" }}
+                    >
+                        {[...awardImages, ...awardImages, ...awardImages, ...awardImages].map((award, idx) => (
+                            <div key={idx} className="w-[400px] h-[300px] flex-shrink-0 relative rounded-xl overflow-hidden border border-gold-500/20 group shadow-2xl">
+                                <img src={award.image} alt={award.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                <div className="absolute inset-0 bg-navy-900/40 group-hover:bg-navy-900/20 transition-colors duration-500"></div>
+                                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-950 via-navy-950/80 to-transparent p-6 pt-24 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                                    <div className="w-8 h-1 bg-gold-500 mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                    <p className="text-white font-serif font-bold text-xl leading-tight group-hover:text-gold-400 transition-colors drop-shadow-lg shadow-black">{award.title}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </motion.div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
 const App = () => {
     return (
         <div className="min-h-screen font-sans text-navy-900 bg-cream-50 selection:bg-gold-200">
@@ -569,6 +603,7 @@ const App = () => {
             <RevolvingCarousel />
             <LibrarySection />
             <ResumeSection />
+            <AwardsSection />
 
             {/* Footer */}
             <footer className="bg-navy-950 text-gray-400 py-20 border-t border-white/5">
