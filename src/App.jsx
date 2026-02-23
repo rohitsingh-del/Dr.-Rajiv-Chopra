@@ -133,11 +133,11 @@ const Hero = () => (
                         used globally, specializing in Data Science, Cloud Computing, and Quantum Computing. His work bridges the gap between complex theoretical concepts and practical industry applications, empowering the next generation of tech leaders.
                     </motion.p>
 
-                    <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
-                        <a href="#books" className="px-8 py-4 bg-navy-900 text-white font-bold text-sm rounded-lg hover:bg-navy-800 transition-all shadow-xl shadow-navy-900/10 hover:shadow-2xl hover:-translate-y-1 flex items-center gap-2">
+                    <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row flex-wrap gap-4 w-full">
+                        <a href="#books" className="flex-1 justify-center px-8 py-4 bg-navy-900 text-white font-bold text-sm rounded-lg hover:bg-navy-800 transition-all shadow-xl shadow-navy-900/10 hover:shadow-2xl hover:-translate-y-1 flex items-center gap-2">
                             Explore Library <ChevronRight className="w-4 h-4" />
                         </a>
-                        <a href="#cv" className="px-8 py-4 bg-white border border-gray-200 text-navy-900 font-bold text-sm rounded-lg hover:bg-gray-50 transition-all hover:border-gold-400 hover:text-gold-700 flex items-center gap-2 group shadow-sm">
+                        <a href="#cv" className="flex-1 justify-center px-8 py-4 bg-white border border-gray-200 text-navy-900 font-bold text-sm rounded-lg hover:bg-gray-50 transition-all hover:border-gold-400 hover:text-gold-700 flex items-center gap-2 group shadow-sm">
                             View Curriculum Vitae <Download className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
                         </a>
                     </motion.div>
@@ -152,7 +152,7 @@ const Hero = () => (
                 >
                     <div className="relative w-full max-w-md aspect-[4/5]">
                         {/* Decorative Frames */}
-                        <div className="absolute inset-0 border border-navy-900/10 translate-x-6 translate-y-6 rounded-none z-0"></div>
+                        <div className="absolute inset-0 border border-navy-900/10 translate-x-3 translate-y-3 md:translate-x-6 md:translate-y-6 rounded-none z-0"></div>
                         <div className="absolute inset-0 bg-white shadow-2xl overflow-hidden flex flex-col z-10 border border-gray-100">
 
                             <div className="h-2/3 bg-navy-900 relative overflow-hidden group">
@@ -227,7 +227,7 @@ const RevolvingCarousel = () => {
                 </p>
             </div>
 
-            <div className="scene">
+            <div className="scene scale-[0.6] sm:scale-75 md:scale-100 transform origin-center my-[-80px] sm:my-[-40px] md:my-0">
                 <div className="carousel">
                     {INTERNATIONAL_BOOKS.map((book, index) => (
                         <div
@@ -398,7 +398,7 @@ const LibrarySection = () => {
 const ResumeSection = () => (
     <section id="cv" className="py-24 bg-white border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
                 <div>
                     <span className="text-gold-600 font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Professional Journey</span>
                     <h2 className="text-4xl font-serif font-bold text-navy-900 mb-4">Curriculum Vitae</h2>
@@ -406,7 +406,7 @@ const ResumeSection = () => (
                         A snapshot of academic excellence, research contributions, and professional milestones.
                     </p>
                 </div>
-                <button className="px-6 py-4 bg-navy-900 text-white text-xs font-bold uppercase tracking-widest hover:bg-navy-800 transition-colors flex items-center gap-3 shadow-lg hover:shadow-xl">
+                <button className="w-full md:w-auto justify-center px-6 py-4 bg-navy-900 text-white text-xs font-bold uppercase tracking-widest hover:bg-navy-800 transition-colors flex items-center gap-3 shadow-lg hover:shadow-xl">
                     <Download className="w-4 h-4" /> Download Full Resume
                 </button>
             </div>
@@ -560,7 +560,7 @@ const AwardsSection = () => {
                         {[...awardImages, ...awardImages, ...awardImages, ...awardImages].map((award, idx) => (
                             <motion.div
                                 key={idx}
-                                className="w-[400px] h-[300px] flex-shrink-0 relative rounded-xl overflow-hidden border border-gold-500/20 group shadow-2xl cursor-pointer bg-navy-900"
+                                className="w-[280px] h-[210px] md:w-[400px] md:h-[300px] flex-shrink-0 relative rounded-xl overflow-hidden border border-gold-500/20 group shadow-2xl cursor-pointer bg-navy-900"
                                 whileHover={{
                                     scale: 1.1,
                                     y: -10,
